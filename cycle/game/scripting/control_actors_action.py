@@ -48,8 +48,8 @@ class ControlActorsAction(Action):
         if self._keyboard_service.is_key_down('s'):
             self._direction1 = Point(0, constants.CELL_SIZE)
         
-        cycle1 = cycles(0)
-        cycle1.turn_head(self._direction)
+        cycle1 = cycles[0]      
+        cycle1.turn_head(self._direction1 )
 
 
         if self._keyboard_service.is_key_down('j'):
@@ -67,5 +67,5 @@ class ControlActorsAction(Action):
         if self._keyboard_service.is_key_down('k'):
            self._direction2 = Point(0, constants.CELL_SIZE)
         
-        cycle2 = cycles(1)
-        cycle2.turn_head(self._direction)
+        cycle2 = cycles[1]
+        cycle2.turn_head(self._direction2)

@@ -1,4 +1,4 @@
-from typing_extensions import Self
+# from typing_extensions import Self
 import constants
 from game.casting.actor import Actor
 from game.shared.point import Point
