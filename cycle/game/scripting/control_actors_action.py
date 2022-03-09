@@ -1,4 +1,3 @@
-from itertools import cycle
 import constants
 from game.scripting.action import Action
 from game.shared.point import Point
@@ -32,6 +31,7 @@ class ControlActorsAction(Action):
             script (Script): The script of Actions in the game.
         """
         cycles = cast.get_actors("cycles")
+
         # left
         if self._keyboard_service.is_key_down('a'):
             self._direction1 = Point(-constants.CELL_SIZE, 0)
@@ -48,10 +48,10 @@ class ControlActorsAction(Action):
         if self._keyboard_service.is_key_down('s'):
             self._direction1 = Point(0, constants.CELL_SIZE)
         
-        cycle1 = cycles[0]      
-        cycle1.turn_head(self._direction1 )
+        cycle1 = cycles[0]
+        cycle1.turn_head(self._direction1)
 
-
+        #left
         if self._keyboard_service.is_key_down('j'):
             self._direction2 = Point(-constants.CELL_SIZE, 0)
         
@@ -60,12 +60,12 @@ class ControlActorsAction(Action):
             self._direction2 = Point(constants.CELL_SIZE, 0)
         
         # up
-        if  self._keyboard_service.is_key_down('i'):
+        if self._keyboard_service.is_key_down('i'):
             self._direction2 = Point(0, -constants.CELL_SIZE)
         
         # down
         if self._keyboard_service.is_key_down('k'):
-           self._direction2 = Point(0, constants.CELL_SIZE)
+            self._direction2 = Point(0, constants.CELL_SIZE)
         
         cycle2 = cycles[1]
         cycle2.turn_head(self._direction2)
