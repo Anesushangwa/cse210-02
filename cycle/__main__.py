@@ -18,7 +18,7 @@ from game.shared.point import Point
 
 def main():
     
-    # create the cast
+    # create the cfast
     cast = Cast()
     cast.add_actor("foods", Food())
     cast.add_actor("cycles", Cycle(constants.GREEN))
